@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+  <navigator url="../home/home">
+     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  </navigator>
+   
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+   <!--进入首页活动-->
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <text class="name">{{name}}</text>
+  </view>
+</view>

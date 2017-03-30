@@ -1,0 +1,16 @@
+.swiper-title{
+    color:#111;
+}
+.item{
+    margin-top:20px;
+}
+image{
+    height: 150px;
+}
+.red{
+    background: red;
+    color:#111;
+}
+.text,.text-input{
+    display: inline-block
+}

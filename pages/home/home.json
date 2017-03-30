@@ -1,0 +1,19 @@
+{
+    "navigationBarTitleText": "消息",
+    "navigationBarTextStyle":"#333",
+    "navigationBarBackgroundColor":"#333",
+    "tabBar": {
+      "color": "#9B9DB1",
+      "selectedColor": "#3cc51f",
+      "borderStyle": "black",
+      "backgroundColor": "#111",
+      "list": [{
+        "pagePath": "pages/conversation/conversation",
+        "text": "会话"
+      }, {
+        "pagePath": "pages/concat/concat",
+        "text": "联系人"
+      }
+      ]
+    }
+}

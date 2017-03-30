@@ -1,0 +1,55 @@
+<view class="concat-cnt">
+  <view class="nav-bar">
+    <view wx:for="{{navTab}}" wx:for-item="items" class="{{items.name}} {{currentIndex == idx?'selected':''}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="selectTab">
+      <text>{{items.text}}</text>
+    </view>
+  </view>
+  <view id="nav-friend" wx:if="{{currentIndex == 0}}">
+    <view wx:for="{{navFriend}}" wx:for-item="item" class="fdlist">
+      <view class="title">
+        <text>{{item.title}}</text>
+      </view>
+      <view class="imgUrl">
+        <image src="{{item.img1}}"></image>
+        <image src="{{item.img2}}"></image>
+        <image src="{{item.img3}}"></image>
+      </view>
+    </view>
+  </view>
+
+  <!--nav-near-->
+  <view id="nav-near" wx:if="{{currentIndex == 1}}">
+    <view class="near-title">
+      <view class="title-img">
+        <image src="{{navNear.info.img}}"></image>
+      </view>
+      <view class="near-name">
+        <view>{{navNear.info.name}}</view>
+        <view>
+          <text>{{navNear.info.huati}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="fangwen">暂无访问</view>
+    <view class="record">
+      <text>推荐部落</text>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="80" height="80" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view><!--/nav-near-->
+
+  <!--nav-ph-->
+  <view id="nav-ph" wx:if="{{currentIndex == 2}}">
+    1111233
+  </view><!--/nav-ph-->
+
+  <!--nav-find-->
+  <view id="nav-find" wx:if="{{currentIndex == 3}}">
+    efgedee234
+  </view><!--/nav-find-->
+</view>

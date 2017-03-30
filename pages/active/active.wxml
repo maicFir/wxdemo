@@ -1,0 +1,69 @@
+<scroll-view scroll-y="true" width="100%">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:for-item="item">
+      <swiper-item>
+        <image src="{{item.img}}" class="slide-image" width="355" height="100" />
+        <text class="red">{{item.title}}</text>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="item">
+    <input bindinput="getText" class="text-input" placeholder="请输入..." />
+    <view class="text">{{text}}</view>
+  </view>
+</scroll-view>
+<!--循环-->
+<view class="ul">
+     <view wx:for="{{arrays}}" wx:for-item="item">{{item.text}}</view>
+</view>
+<!--数据的双向绑定-->
+<view>
+    <button type="primary" size="mini" bindtap="add">add</button>
+    <text>{{textInfo}}</text>
+</view>
+<progress percent="{{Number}}" color="pink" active show-info />
+<!--<view class="page">
+  <view class="page__bd">
+    <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+      <view class="section__title">{{item.text}}</view>
+      <view class="section__ctn">
+        <view>{{item.mode}}</view>
+      </view>
+    </view>
+  </view>
+</view>-->
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox checked="{{item.checked}}" />{{item.value}}
+  </label>
+  <label class="checkbox" wx:for="{{items}}" wx:for-item="a">
+    <checkbox checked="{{a.checked}}" />{{a.value}}
+  </label>
+</checkbox-group>
+<!--表单-->
+<view>
+    <input auto-focus placeholder="请输入账号..."/>
+    <input focus="true" placeholder="自动获取焦点..."/>
+    <input maxlength="5" placeholder="最大长度是5"/>
+    <input password type="number" />
+    <input type="idcard" placeholder="身份证输入键盘" />
+    <input placeholder-style="color:green" placeholder="占位符字体是红色的" />
+    <input bindinput="bindReplace" placeholder="连续的两个1会变成2"/>
+</view>
+<!--时间选择器-->
+<view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<!--<switch type="switch" />-->
+<view>
+    <switch />
+</view>
+ <navigator url="navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
+
+ <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+ <button type="primary" bindtap="audioPlay">播放</button>

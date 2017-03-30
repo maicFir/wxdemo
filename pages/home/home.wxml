@@ -1,0 +1,13 @@
+<scroll-view scroll-y="true">
+  <view wx:for="{{datas}}" wx:for-item="items" wx:for-index="idx" class="list">
+    <navigator url="{{items.url}}" bindtap="getChat"  data-id="{{idx}}" data-text="{{items.name}}">
+      <view class="title-img">
+        <image src="{{items.img}}"></image>
+      </view>
+      <view class="title-msg">
+        <view>{{items.name}}</view>
+        <view>{{items.cnt}}</view>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>

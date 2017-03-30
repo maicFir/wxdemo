@@ -1,0 +1,44 @@
+<view class="concat-cnt">
+    <view class="nav-bar" >
+        <view wx:for="{{navTab}}" wx:for-item="items" class="{{items.name}} {{currentIndex == idx?'selected':''}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="selectTab"><text>{{items.text}}</text></view>
+    </view>
+    <view id="nav-friend" wx:if="{{currentIndex == 0}}">
+        <!--1-->
+        <view class="ul">
+            <view class="title" bindtap="show" data-idx = "0">
+                <text>{{newFirend.myFrided.title}}</text>
+                <view class="tip"></view>
+            </view>
+            <view wx:for="{{newFirend.myFrided.textArry}}" wx:for-item="items" wx:if="{{index == flag1}}">
+                <text>{{items.name}}</text>
+            </view>
+        </view>
+        <!--1-->
+        <!--2-->
+        <view class="ul">
+            <view  class="title" bindtap="show" data-idx="1">
+                <text>{{newFirend.homeFriend.title}}</text>
+                 <view class="tip"></view>
+            </view>
+            <view wx:for="{{newFirend.homeFriend.textArry}}" wx:for-item="items">
+                <text>{{items.name}}</text>
+            </view>
+        </view>
+        <!--2-->
+        <!--3-->
+         <view class="ul">
+             <view  class="title" bindtap="show" data-idx="2">
+                 <text>{{newFirend.qinren.title}}</text>
+                 <view class="tip"></view>
+             </view>
+             <view wx:for="{{newFirend.qinren.textArry}}" wx:for-item="items" wx:if="{{index == flag3}}"><text>{{items.name}}</text></view>
+        </view>
+        <!--3-->
+    </view>
+     <view id="nav-group" wx:if="{{currentIndex == 1}}">
+           <view>我是群聊</view>
+    </view>
+     <view id="nav-discut" wx:if="{{currentIndex == 2}}">
+           <view>我是公众号</view>
+    </view>
+</view>

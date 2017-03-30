@@ -1,0 +1,78 @@
+/* pages/interPart/interPart.wxss */
+.nav-bar{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    flex-direction: inherit;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-top:1px solid #ccc;
+    position: fixed;
+    width:100%;
+    overflow-x: auto;
+    top:0px;
+    left:0px;
+    background-color:#fff; 
+}
+.nav-bar>view{
+    flex: 1;
+    color:#111;
+    padding:5px 0px;
+}
+.nav-bar>view.selected{
+    color:#0aa7ff;
+    position:relative;
+    border-bottom: 1px solid #0aa7ff;
+}
+
+.nav-bar>view:nth-of-type(1) text,.nav-bar>view:nth-of-type(2) text,.nav-bar>view:nth-of-type(3) text{
+    display: inline-block;
+    width:100%;
+    border-right: 1px solid #ccc;
+}
+
+.concat-cnt #nav-friend,.concat-cnt #nav-near,.concat-cnt #nav-ph,.concat-cnt #nav-find{
+    padding-top:30px;
+}
+.imgUrl{
+    display:flex;
+    margin:0px 5px;
+}
+.imgUrl image{
+    display: inline-block;
+    flex:1;
+    width:100%;
+    height:80px;
+    margin:5px 5px;
+}
+.fdlist .title{
+    padding:5px 10px;
+}
+.near-title{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:10px 10px;
+}
+.title-img{
+    flex:25% 0 25%;
+}
+.near-name{
+   padding-left:10px;
+   line-height:20px;
+}
+.near-title view>image{
+    width:60px;
+    height:60px;
+}
+.fangwen{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height:100px;
+    background-color:#e5e5e5;
+}
+.record{
+    padding:15px 10px;
+    position:relative;
+}

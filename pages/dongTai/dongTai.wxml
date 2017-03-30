@@ -1,0 +1,17 @@
+<view class="concat-cnt">
+    <view class="nav-bar" >
+        <view wx:for="{{navTab}}" wx:for-item="items" class="{{items.name}} {{currentIndex == idx?'selected':''}}" wx:for-index="idx" data-idx="{{idx}}" bindtap="selectTab"><text>{{items.text}}</text></view>
+    </view>
+    <view id="nav-friend" wx:if="{{currentIndex == 0}}">
+        好友动态
+    </view>
+     <view id="nav-group" wx:if="{{currentIndex == 1}}">
+           <view>附近的人</view>
+    </view>
+   <view id="nav-discut" wx:if="{{currentIndex == 2}}">
+           <view wx:for="{{imgaelist}}" wx:for-item="item" class="list">
+                <view><image src="{{item.imgurl}}" class="img"></image></view>
+                <view><text>{{item.text}}</text></view>
+           </view>
+    </view>
+</view>
